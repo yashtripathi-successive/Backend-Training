@@ -15,7 +15,8 @@ import globalErrorHandler from './utils/globalErrorHandler'
 import ratelimiter from './middlewares/rateLimiter'
 import asyncErrorRoute from './routes/asyncErrorRoute'
 import loginRegisterRoute from './routes/loginRegisterRoute'
-
+import createAPIRouter from './routes/createAPIRoute'
+import connectDB from "./config/db"
 
 
 
@@ -25,14 +26,14 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(express.json())
-app.use(addCustomHeader("DevelopedBy","YashTripathi"))
-app.use(reqLogger)
-app.set("trust-proxy",true);
-//app.use(ratelimiter(60*1000,5))
-app.get('/',(req,res)=>{
-    console.log(req.headers)
-    res.status(201).json({message:"printing header"})
-})
+// app.use(addCustomHeader("DevelopedBy","YashTripathi"))
+// app.use(reqLogger)
+// app.set("trust-proxy",true);
+// app.use(ratelimiter(60*1000,5))
+// app.get('/',(req,res)=>{
+//     console.log(req.headers)
+//     res.status(201).json({message:"printing header"})
+// })
 
 // app.use('/api/user',userRoutes)
 // app.use('/api/user',registrationFormRoute)
@@ -44,8 +45,10 @@ app.get('/',(req,res)=>{
 // app.use('/api/user',asyncErrorRoute)
 // app.use('/api/user/loginregister',loginRegisterRoute)
 
+//assignment 9
 
-
+app.use('/api/user',createAPIRouter)
+connectDB()
 
 app.use(globalErrorHandler)
 app.listen(3000,()=>{
