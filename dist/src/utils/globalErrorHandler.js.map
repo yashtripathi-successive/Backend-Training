@@ -1,0 +1,1 @@
+{"version":3,"file":"globalErrorHandler.js","sourceRoot":"","sources":["../../../src/utils/globalErrorHandler.ts"],"names":[],"mappings":"AAEA,SAAS,kBAAkB,CAAC,GAAS,EAAC,GAAW,EAAC,GAAY,EAAC,IAAiB;IAC5E,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC;QACjB,OAAO,EAAC,GAAG;KACd,CAAC,CAAA;AACN,CAAC;AACD,eAAe,kBAAkB,CAAA"}

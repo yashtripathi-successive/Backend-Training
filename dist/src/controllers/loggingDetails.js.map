@@ -1,0 +1,1 @@
+{"version":3,"file":"loggingDetails.js","sourceRoot":"","sources":["../../../src/controllers/loggingDetails.ts"],"names":[],"mappings":"AAEA,SAAS,cAAc,CAAC,GAAW,EAAC,GAAY;IAChD,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,OAAO,CAAC,CAAA;IACxB,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,EAAC,OAAO,EAAC,kCAAkC,EAAC,IAAI,EAAC,GAAG,CAAC,IAAI,EAAC,CAAC,CAAA;AAChF,CAAC;AAED,eAAe,cAAc,CAAA"}

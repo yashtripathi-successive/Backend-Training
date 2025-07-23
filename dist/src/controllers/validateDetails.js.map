@@ -1,0 +1,1 @@
+{"version":3,"file":"validateDetails.js","sourceRoot":"","sources":["../../../src/controllers/validateDetails.ts"],"names":[],"mappings":"AAEA,SAAS,eAAe,CAAC,GAAW,EAAC,GAAY;IAC9C,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC;QAClB,OAAO,EAAC,QAAQ;KAClB,CAAC,CAAA;AACL,CAAC;AACD,eAAe,eAAe,CAAA"}

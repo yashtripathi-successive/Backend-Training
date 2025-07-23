@@ -1,0 +1,1 @@
+{"version":3,"file":"logIP.js","sourceRoot":"","sources":["../../../src/controllers/logIP.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU;IACT,aAAa,CAAC,GAAW,EAAC,GAAY;QACzC,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,EAAC,OAAO,EAAC,aAAa,EAAC,CAAC,CAAA;IACjD,CAAC;CACA;AACD,eAAe,UAAU,CAAA"}
