@@ -1,0 +1,1 @@
+{"version":3,"file":"mockDataRoute.js","sourceRoot":"","sources":["../../../src/routes/mockDataRoute.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,SAAS,CAAA;AAC7B,OAAO,aAAa,MAAM,8BAA8B,CAAA;AACxD,OAAO,gBAAgB,MAAM,iCAAiC,CAAA;AAC9D,MAAM,MAAM,GAAG,OAAO,CAAC,MAAM,EAAE,CAAA;AAG/B,MAAM,CAAC,IAAI,CAAC,WAAW,EAAC,gBAAgB,EAAE,EAAC,aAAa,CAAC,CAAA;AAEzD,eAAe,MAAM,CAAA"}
