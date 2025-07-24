@@ -10,9 +10,7 @@ class AuthController{
 public async register(req:Request,res:Response,next:NextFunction){
 
     const {name,email,password} = req.body
-
-    const token = jwt.sign(req.body,secretKey)
-    console.log(token)
+    console.log("Request body:", req.body);
 
     try{
        const userExists = await User.findOne({email})
@@ -25,12 +23,16 @@ public async register(req:Request,res:Response,next:NextFunction){
 
         const user = await User.create({name,email,password})
 
+        const token = jwt.sign({id:user._id,email:user.email},secretKey)
+        console.log(token)
+
         res.status(201).json({
         message:"user created successfully",
         data:{
             name:name,
             email:email
-        }
+        },
+        token
         })
     }catch(err){
         next(err)
@@ -45,6 +47,7 @@ public async register(req:Request,res:Response,next:NextFunction){
     try{
 
         const {name,email,password} = req.body
+        console.log("Request body:", req.body);
         if(!email || !password || !name){
             return res.status(400).json({
                 message:"one of the field is missing"
@@ -59,12 +62,16 @@ public async register(req:Request,res:Response,next:NextFunction){
             })
         }
 
+        const token = jwt.sign({id:user._id,email:user.email},secretKey)
+        console.log(token)
+
         res.status(201).json({
-            message:"user loggedin successfully",
-            data:{
-                name:name,
-                email:email
-            }
+        message:"user loggedin successfully",
+        data:{
+            name:name,
+            email:email
+        },
+        token
         })
 
     }catch(err){
@@ -87,7 +94,7 @@ public async register(req:Request,res:Response,next:NextFunction){
 
     const token = header.split(' ')[1]
     const data = jwt.verify(token,secretKey)
-    
+    console.log(data)
    next()
 
 }

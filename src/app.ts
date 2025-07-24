@@ -27,14 +27,14 @@ const app = express()
 // app.use(cors())
 app.use(bodyParser.json())
 app.use(express.json())
-app.use(addCustomHeader("DevelopedBy","YashTripathi"))
-app.use(reqLogger)
-app.set("trust-proxy",true);
-//app.use(ratelimiter(60*1000,5))
-app.get('/',(req,res)=>{
-    console.log(req.headers)
-    res.status(201).json({message:"printing header"})
-})
+// app.use(addCustomHeader("DevelopedBy","YashTripathi"))
+// app.use(reqLogger)
+// app.set("trust-proxy",true);
+// app.use(ratelimiter(60*1000,5))
+// app.get('/',(req,res)=>{
+//     console.log(req.headers)
+//     res.status(201).json({message:"printing header"})
+// })
 
 // app.use('/api/user',userRoutes)
 // app.use('/api/user',registrationFormRoute)
