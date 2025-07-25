@@ -2,8 +2,8 @@ import {Request,Response, NextFunction } from "express";
 import userSchema from "../validations/userValidation.js";
 
 
-
-function validateUser(req:Request,res:Response,next:NextFunction){
+class validateUserClass{
+public validateUser(req:Request,res:Response,next:NextFunction){
     const {value,error} = userSchema.validate(req.body)
 
     if(error){
@@ -12,5 +12,5 @@ function validateUser(req:Request,res:Response,next:NextFunction){
     next()
 }
 
-
-export default validateUser
+}
+export default validateUserClass

@@ -6,7 +6,9 @@ interface UserData {
   age: number;
 }
 
-function auth(req:Request,res:Response,next:NextFunction){
+
+class authClass{
+public auth(req:Request,res:Response,next:NextFunction){
       const userData :UserData = { name: "yash", age: 21 }
       const secretKey :string = "yash"
       const token = jwt.sign(userData,secretKey)
@@ -14,5 +16,5 @@ function auth(req:Request,res:Response,next:NextFunction){
       res.status(201).json({token})
       
 }
-
-export default auth
+}
+export default authClass

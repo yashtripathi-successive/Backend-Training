@@ -14,9 +14,9 @@ declare global {
   }
 }
 
+class mockApiGeneratorClass{
 
-
-function mockApiGenerator(){
+public mockApiGenerator(){
     return function(req:Request,res:Response,next:NextFunction){
         const count = parseInt(req.body.count)
         const users:MockUser[] = []
@@ -32,4 +32,5 @@ function mockApiGenerator(){
     }
 }
 
-export default mockApiGenerator
+}
+export default mockApiGeneratorClass

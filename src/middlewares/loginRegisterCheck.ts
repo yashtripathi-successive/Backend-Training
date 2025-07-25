@@ -6,7 +6,8 @@ interface User {
 
 const users: Record<string, User> = {};
 
-export function loginRegisterCheck(req:Request,res:Response,next:NextFunction){
+class loginRegisterClass{
+ public loginRegisterCheck(req:Request,res:Response,next:NextFunction){
     const registerError: Record<string, string> = {};
     const {email,password} = req.body
     if(!email){
@@ -35,7 +36,7 @@ export function loginRegisterCheck(req:Request,res:Response,next:NextFunction){
 
 }
 
-export function  verifyLogin(req:Request,res:Response,next:NextFunction){
+ public  verifyLogin(req:Request,res:Response,next:NextFunction){
     
     const loginError: Record<string, string> = {};
     const {email,password} = req.body
@@ -64,3 +65,6 @@ export function  verifyLogin(req:Request,res:Response,next:NextFunction){
     next();
 
 }
+}
+
+export default loginRegisterClass
