@@ -7,14 +7,14 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Enter Number 1 :', (num1:string) => {
+rl.question('Enter Number 1 :', (num1:number) => {
     const n1 = Number(num1)
     if(isNaN(n1)){
         console.log('invalid number 1')
         rl.close();
     }
 
-    rl.question('Enter Number 2 : ', (num2:string)=>{
+    rl.question('Enter Number 2 : ', (num2:number)=>{
         const n2 = Number(num2)
         if(isNaN(n2)){
             console.log('invalid number 2')
