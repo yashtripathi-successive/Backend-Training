@@ -7,7 +7,7 @@ const port = 3000;
 
 server.get('/mockdata',(req,res)=>{
 
-    res.json(mockData.default)
+    res.json(mockData)
     
     
 })
