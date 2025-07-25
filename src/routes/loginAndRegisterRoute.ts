@@ -12,6 +12,12 @@ router.post('/register',authController.register)
 
 // router.post('/login',login)
 
-router.post('/login',authController.authenticationMiddleware,authController.login)
+router.post('/login',authController.login)
+
+router.post('/protected',authController.authenticationMiddleware,(req:Request,res:Response)=>{
+    res.status(201).json({
+        message:"welcome to home page"
+    })
+})
 
 export default router
