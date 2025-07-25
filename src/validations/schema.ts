@@ -1,6 +1,6 @@
 import Joi from 'joi'
 
-const validationSchema = {
+const schema = {
     "/userdetails":Joi.object({
         username:Joi.string().required(),
         email:Joi.string().email().required()
@@ -13,4 +13,4 @@ const validationSchema = {
 }
 
 
-export default validationSchema;
+export default schema;
