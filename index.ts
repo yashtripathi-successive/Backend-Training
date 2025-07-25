@@ -22,11 +22,7 @@ rl.question('Enter Number 1 :', (num1:string) => {
         }
     
 
-    // console.log('addition of number 1 and number 2 is : ',add(n1,n2))
-    // console.log('subtraction of number 1 and number 2 is : ',sub(n1,n2))
-    // console.log('multiplication of number 1 and number 2 is : ',mul(n1,n2))
-    // console.log('division of number 1 and number 2 is : ',div(n1,n2))
-
+    
 
     const results = [['operation','number1','number2','result'],
                      ['addition',n1,n2,add(n1,n2)],
