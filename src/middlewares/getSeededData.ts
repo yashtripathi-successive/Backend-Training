@@ -1,6 +1,6 @@
-import express, { Request, Response, NextFunction } from 'express'
+import { Request, Response, NextFunction } from 'express'
 import {faker} from '@faker-js/faker'
-const app = express()
+
 
 interface user{
     id:string;
@@ -42,11 +42,6 @@ function mockApiData(count:number){
 }
 }
 
-app.get('/generateusers',mockApiData(20),(req,res,next)=>{
-    res.status(201).json(req.users)
-})
 
 
-app.listen(3000,()=>{
-    console.log('server active at port : 3000')
-})
+export default mockApiData

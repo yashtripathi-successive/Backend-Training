@@ -1,6 +1,6 @@
-import express, {Request, NextFunction, Response } from 'express'
+import {Request, NextFunction, Response } from 'express'
 import {faker} from '@faker-js/faker'
-const app = express()
+
 
 interface user{
     id:string;
@@ -19,7 +19,7 @@ declare global{
     }
 }
 
-app.use(express.json())
+
 
 function generateMockData(){
     return (req:Request,res:Response,next:NextFunction)=>{
@@ -51,13 +51,7 @@ function generateMockData(){
 
 
 
-app.post('/generateuser1',generateMockData(), (req,res)=>{
-   
-    res.status(201).json(req.users)
-})
     
 
 
-app.listen(3000,()=>{
-    console.log('server active at port 3000')
-})
+export default generateMockData
