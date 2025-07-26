@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import Item from "../models/Items";
 
-
-async function creatAPI(req:Request,res:Response,next:NextFunction){
+class createApiClass{
+public async creatAPI(req:Request,res:Response,next:NextFunction){
 
     try{
         const {title,description} = req.body
@@ -19,5 +19,5 @@ async function creatAPI(req:Request,res:Response,next:NextFunction){
     }
     
 }
-
-export default creatAPI
+}
+export default createApiClass
