@@ -1,1 +1,0 @@
-{"version":3,"file":"registrationFormRoute.js","sourceRoot":"","sources":["../../../src/routes/registrationFormRoute.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,SAAS,CAAA;AAC7B,OAAO,wBAAwB,MAAM,yCAAyC,CAAA;AAC9E,OAAO,UAAU,MAAM,2BAA2B,CAAA;AAClD,MAAM,MAAM,GAAG,OAAO,CAAC,MAAM,EAAE,CAAA;AAG/B,MAAM,CAAC,IAAI,CAAC,mBAAmB,EAAC,wBAAwB,EAAC,UAAU,CAAC,CAAA;AAEpE,eAAe,MAAM,CAAA"}
