@@ -27,4 +27,3 @@ Middleware can perform various tasks such as:
 
 5. **Third-party Middleware**  
    Middleware created by the community to handle tasks like cookies, sessions, CORS, etc.
-

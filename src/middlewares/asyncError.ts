@@ -1,16 +1,17 @@
-import express, { NextFunction, Request, Response } from 'express'
+import { NextFunction, Request, Response } from "express"
 
-async function intentionalError(req:Request,res:Response,next:NextFunction){
-    try{
-        await new Promise((resolve,reject)=>{
-            reject(new Error("Error Successfully Generated"))
-        })
-    }
-    catch(err){
-        next(err)
-    }
+
+class asyncErrorClass{
+public async asyncError(req:Request,res:Response,next:NextFunction){
+  try{
+     await new Promise((resolve,reject)=>{
+        reject("intentional error")
+     })
+  }
+  catch(err){
+
+    next(err)
+  }
 }
-
-
-export default intentionalError
-
+}
+export default asyncErrorClass

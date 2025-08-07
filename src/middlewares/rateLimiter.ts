@@ -1,12 +1,14 @@
-import rateLimit from 'express-rate-limit'
+import rateLimit from "express-rate-limit";
+import { RateLimitRequestHandler } from "express-rate-limit";
 
-function rateLimiter(time:number,requests:number){
+function ratelimiter(time:number,req:number): RateLimitRequestHandler{
     return rateLimit({
     windowMs:time,
-    max:requests,
-    message:"rate limit is exceeded"
+    max:req,
+    message:"too many req in 1 min"
     
-    }) 
+   })
 }
 
-export default rateLimiter
+
+export default ratelimiter
