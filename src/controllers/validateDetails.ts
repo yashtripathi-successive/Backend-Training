@@ -1,11 +1,8 @@
 import { Request, Response } from "express"
 
-
-class validateDetailsClass{
-public validateDetails(req:Request,res:Response){
+function validateDetails(req:Request,res:Response){
    res.status(201).json({
       message:"all ok"
    })
 }
-}
-export default validateDetailsClass
+export default validateDetails

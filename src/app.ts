@@ -16,6 +16,9 @@ import ratelimiter from './middlewares/rateLimiter'
 import asyncErrorRoute from './routes/asyncErrorRoute'
 import loginRegisterRoute from './routes/loginRegisterRoute'
 
+
+
+
 const app = express()
 // app.use(cors())
 
@@ -31,15 +34,18 @@ app.get('/',(req,res)=>{
     res.status(201).json({message:"printing header"})
 })
 
-app.use('/api/user',userRoutes)
-app.use('/api/user',registrationFormRoute)
-app.use('/api',checkQueryParameters)
-app.use('/api',validateIpAddressRoute)
-app.use('/api/user',routeBasedValidationCheck)
-app.use('/api/user',mockDataRoute)
-app.use('/api/user',authRoute)
-app.use('/api/user',asyncErrorRoute)
-app.use('/api/user/loginregister',loginRegisterRoute)
+// app.use('/api/user',userRoutes)
+// app.use('/api/user',registrationFormRoute)
+// app.use('/api',checkQueryParameters)
+// app.use('/api',validateIpAddressRoute)
+// app.use('/api/user',routeBasedValidationCheck)
+// app.use('/api/user',mockDataRoute)
+// app.use('/api/user',authRoute)
+// app.use('/api/user',asyncErrorRoute)
+// app.use('/api/user/loginregister',loginRegisterRoute)
+
+
+
 
 app.use(globalErrorHandler)
 app.listen(3000,()=>{

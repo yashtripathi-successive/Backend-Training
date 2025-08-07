@@ -14,11 +14,9 @@ declare global {
   }
 }
 
-class mockApiDetailClass{
-public mockApiDetail(req:Request,res:Response){
+
+function mockApiDetail(req:Request,res:Response){
     res.status(201).json({message:"mock data",users:req.users})
 }
 
-}
-
-export default mockApiDetailClass
+export default mockApiDetail

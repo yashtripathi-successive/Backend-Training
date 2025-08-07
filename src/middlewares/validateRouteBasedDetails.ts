@@ -1,9 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import validationConfig from "../config/validationConfig";
 
-
-class validateRouteBasedDetailsClass{
-public validateRouteBasedDetails(req:Request,res:Response,next:NextFunction){
+function validateRouteBasedDetails(req:Request,res:Response,next:NextFunction){
     const path:string=req.route.path;
     const schema = validationConfig[path]
 
@@ -21,5 +19,5 @@ public validateRouteBasedDetails(req:Request,res:Response,next:NextFunction){
 
 }
 
-}
-export default validateRouteBasedDetailsClass
+
+export default validateRouteBasedDetails

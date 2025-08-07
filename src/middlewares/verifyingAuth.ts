@@ -16,8 +16,7 @@ declare global {
 }
 
 
-class verifyingAuthClass{
-public verifyingAuth(req:Request,res:Response,next:NextFunction){
+function verifyingAuth(req:Request,res:Response,next:NextFunction){
 const secretKey = "yash"
 const header = req.headers.authorization
 
@@ -36,5 +35,5 @@ console.log(`data is : ${data}`)
 req.user = data
 next()
 }
-}
-export default verifyingAuthClass
+
+export default verifyingAuth

@@ -1,8 +1,6 @@
 import { NextFunction, Request, Response } from "express"
 
-
-class asyncErrorClass{
-public async asyncError(req:Request,res:Response,next:NextFunction){
+async function asyncError(req:Request,res:Response,next:NextFunction){
   try{
      await new Promise((resolve,reject)=>{
         reject("intentional error")
@@ -13,5 +11,5 @@ public async asyncError(req:Request,res:Response,next:NextFunction){
     next(err)
   }
 }
-}
-export default asyncErrorClass
+
+export default asyncError

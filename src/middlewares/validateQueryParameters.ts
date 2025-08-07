@@ -1,8 +1,6 @@
 import { NextFunction, Request, Response } from "express"
 
-
-class validateQueryParametersClass{
-public validateQueryParameters(parameters:string[]= []){
+function validateQueryParameters(parameters:string[]= []){
     return function (req:Request,res:Response,next:NextFunction) {
         for(const params of parameters){
             const value = req.query[params]
@@ -15,5 +13,5 @@ public validateQueryParameters(parameters:string[]= []){
 
 
 }
-}
-export default validateQueryParametersClass
+
+export default validateQueryParameters
