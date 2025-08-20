@@ -1,22 +1,56 @@
-import express from 'express'
-import createApiRoute from './routes/createApiRoute'
-import globalErrorHandler from './utils/globalErrorHandler'
+import express from "express"
+import bodyParser from 'body-parser'
+import cors from 'cors'
+
+import userRoutes from './routes/userRoutes'
+import registrationFormRoute from './routes/registrationFormRoute'
+import checkQueryParameters from './routes/checkQueryParameters'
+import validateIpAddressRoute from './routes/validateIpAddressRoute'
+import routeBasedValidationCheck from './routes/routeBasedValidationCheck'
+import mockDataRoute from './routes/mockDataRoute'
+import authRoute from './routes/authRoute'
 import addCustomHeader from './utils/addCustomHeader'
 import reqLogger from './utils/reqLogger'
-import bodyParser from 'body-parser'
-import connectDB from './config/db'
+import globalErrorHandler from './utils/globalErrorHandler'
+import ratelimiter from './middlewares/rateLimiter'
+import asyncErrorRoute from './routes/asyncErrorRoute'
+import loginRegisterRoute from './routes/loginRegisterRoute'
+import connectDB from "./config/db"
+
+//assignment10
+import loginAndRegisterRoute from './routes/loginAndRegisterRoute'
+
+
+
+
 const app = express()
-
-
-connectDB()
+// app.use(cors())
 app.use(bodyParser.json())
 app.use(express.json())
-//app.use(addCustomHeader("Developed-By","Yash"))
-app.use(reqLogger)
-app.use('/api/user',createApiRoute)
-app.use(globalErrorHandler)
+// app.use(addCustomHeader("DevelopedBy","YashTripathi"))
+// app.use(reqLogger)
+// app.set("trust-proxy",true);
+// app.use(ratelimiter(60*1000,5))
+// app.get('/',(req,res)=>{
+//     console.log(req.headers)
+//     res.status(201).json({message:"printing header"})
+// })
 
+// app.use('/api/user',userRoutes)
+// app.use('/api/user',registrationFormRoute)
+// app.use('/api',checkQueryParameters)
+// app.use('/api',validateIpAddressRoute)
+// app.use('/api/user',routeBasedValidationCheck)
+// app.use('/api/user',mockDataRoute)
+// app.use('/api/user',authRoute)
+// app.use('/api/user',asyncErrorRoute)
+// app.use('/api/user/loginregister',loginRegisterRoute)
+
+
+// assignment 10
+connectDB()
+app.use('/api/assignment10',loginAndRegisterRoute)
+app.use(globalErrorHandler)
 app.listen(3000,()=>{
-    console.log('server active at port 3000');
-    
+    console.log(`server active at port 3000`)
 })
