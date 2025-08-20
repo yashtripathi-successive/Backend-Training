@@ -2,8 +2,8 @@ import connectDB from '../config/db';
 import Country, { countrySchemaInterface } from '../models/Country';
 
 const countries : countrySchemaInterface[] = [
-  { name: "India", code: "IN" },
-  { name: "Uk", code: "UK" },
+  { name: "Russia", code: "RU" },
+  { name: "Japan", code: "JP" },
 ];
 
 (async function seedCountry() {
