@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 40113ce349764edcfe1e963881feb800d1118773
 import { NextFunction } from "connect";
 import { Request, Response } from "express";
 
@@ -12,6 +15,8 @@ function globalErrorHandler(err:Error,req:Request,res:Response,next:NextFunction
 
 }
 
+<<<<<<< HEAD
+=======
 =======
 import { NextFunction, Request, Response } from "express"
 
@@ -21,4 +26,5 @@ function globalErrorHandler(err:Error,req:Request,res:Response,next:NextFunction
     })
 }
 >>>>>>> df97738ec1c2e058f985e2b9f3754d459af90af9
+>>>>>>> 40113ce349764edcfe1e963881feb800d1118773
 export default globalErrorHandler
